@@ -4,6 +4,7 @@ import data.DataStore;
 import models.Student;
 import repositories.StudentRepository;
 
+import java.util.Collection;
 import java.util.List;
 
 public class StudentRepositoryImpl implements StudentRepository {
@@ -35,6 +36,16 @@ public class StudentRepositoryImpl implements StudentRepository {
         if (student != null) {
             dataStore.getStudents().remove(student);
         }
+    }
+
+    @Override
+    public Collection<Object> getStudents() {
+        return List.of();
+    }
+
+    @Override
+    public Student findStudentById(Long id) {
+        return null;
     }
 }
 

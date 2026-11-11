@@ -1,6 +1,8 @@
 package repositories;
 
 import models.Enrollment;
+
+import java.util.Collection;
 import java.util.List;
 
 public interface EnrollmentRepository {
@@ -8,5 +10,9 @@ public interface EnrollmentRepository {
     Enrollment findById(Long id);
     List<Enrollment> findAll();
     void delete(Long id);
+
+    Collection<Object> getEnrollments();
+
+    Enrollment findEnrollmentById(Long id);
 }
 

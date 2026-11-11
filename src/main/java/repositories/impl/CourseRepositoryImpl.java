@@ -4,6 +4,7 @@ import data.DataStore;
 import models.Course;
 import repositories.CourseRepository;
 
+import java.util.Collection;
 import java.util.List;
 
 public class CourseRepositoryImpl implements CourseRepository {
@@ -35,6 +36,16 @@ public class CourseRepositoryImpl implements CourseRepository {
         if (course != null) {
             dataStore.getCourses().remove(course);
         }
+    }
+
+    @Override
+    public Collection<Object> getCourses() {
+        return List.of();
+    }
+
+    @Override
+    public Course findCourseById(Long id) {
+        return null;
     }
 }
 

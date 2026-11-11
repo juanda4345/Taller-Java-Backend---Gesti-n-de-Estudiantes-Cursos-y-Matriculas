@@ -3,7 +3,8 @@ package services.impl;
 import models.Student;
 import repositories.StudentRepository;
 import services.StudentService;
-import java.util.List;
+
+import java.util.Collection;
 
 public class StudentServiceImpl implements StudentService {
 
@@ -24,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> findAll() {
+    public Collection<Object> findAll() {
         return studentRepository.getStudents();
     }
 
@@ -34,6 +35,11 @@ public class StudentServiceImpl implements StudentService {
         if (student != null) {
             studentRepository.getStudents().remove(student);
         }
+    }
+
+    @Override
+    public void delete(String name, String lastName, String email) {
+
     }
 }
 

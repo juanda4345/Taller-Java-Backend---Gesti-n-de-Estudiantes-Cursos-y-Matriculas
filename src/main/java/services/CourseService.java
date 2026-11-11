@@ -1,11 +1,12 @@
 package services;
 
 import models.Course;
-import java.util.List;
+
+import java.util.Collection;
 
 public interface CourseService {
     void save(Course course);
     Course findById(Long id);
-    List<Course> findAll();
+    Collection<Object> findAll();
     void delete(Long id);
 }

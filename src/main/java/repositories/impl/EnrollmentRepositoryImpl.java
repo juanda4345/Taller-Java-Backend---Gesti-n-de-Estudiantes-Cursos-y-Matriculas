@@ -4,6 +4,7 @@ import data.DataStore;
 import models.Enrollment;
 import repositories.EnrollmentRepository;
 
+import java.util.Collection;
 import java.util.List;
 
 public class EnrollmentRepositoryImpl implements EnrollmentRepository {
@@ -35,6 +36,16 @@ public class EnrollmentRepositoryImpl implements EnrollmentRepository {
         if (enrollment != null) {
             dataStore.getEnrollments().remove(enrollment);
         }
+    }
+
+    @Override
+    public Collection<Object> getEnrollments() {
+        return List.of();
+    }
+
+    @Override
+    public Enrollment findEnrollmentById(Long id) {
+        return null;
     }
 }
 

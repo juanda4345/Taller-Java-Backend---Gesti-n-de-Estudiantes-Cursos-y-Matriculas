@@ -3,7 +3,8 @@ package services.impl;
 import models.Enrollment;
 import repositories.EnrollmentRepository;
 import services.EnrollmentService;
-import java.util.List;
+
+import java.util.Collection;
 
 public class EnrollmentServiceImpl implements EnrollmentService {
 
@@ -24,7 +25,7 @@ public class EnrollmentServiceImpl implements EnrollmentService {
     }
 
     @Override
-    public List<Enrollment> findAll() {
+    public Collection<Object> findAll() {
         return enrollmentRepository.getEnrollments();
     }
 
@@ -34,6 +35,11 @@ public class EnrollmentServiceImpl implements EnrollmentService {
         if (enrollment != null) {
             enrollmentRepository.getEnrollments().remove(enrollment);
         }
+    }
+
+    @Override
+    public void save(String studentId, String courseId, String email) {
+
     }
 }
 

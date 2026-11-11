@@ -3,7 +3,8 @@ package services.impl;
 import models.Course;
 import repositories.CourseRepository;
 import services.CourseService;
-import java.util.List;
+
+import java.util.Collection;
 
 public class CourseServiceImpl implements CourseService {
 
@@ -24,7 +25,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public List<Course> findAll() {
+    public Collection<Object> findAll() {
         return courseRepository.getCourses();
     }
 

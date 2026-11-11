@@ -1,6 +1,8 @@
 package repositories;
 
 import models.Student;
+
+import java.util.Collection;
 import java.util.List;
 
 public interface StudentRepository {
@@ -8,5 +10,9 @@ public interface StudentRepository {
     Student findById(Long id);
     List<Student> findAll();
     void delete(Long id);
+
+    Collection<Object> getStudents();
+
+    Student findStudentById(Long id);
 }
 
